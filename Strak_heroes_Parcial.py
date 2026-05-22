@@ -57,7 +57,7 @@ def imprimir_menu():
 #  FUNCIONES DE VALIDACIÓN
 
 def validar_string_no_vacio(mensaje: str) -> str:
-    #Solicita un string no vacío al usuario.#
+    #Solicita un string no vacío al usuario.
     valor = input(mensaje).strip()
     if valor == "":
         print("El campo no puede estar vacío. Intentá de nuevo.")
@@ -66,7 +66,7 @@ def validar_string_no_vacio(mensaje: str) -> str:
 
 
 def validar_empresa() -> str:
-    #Solicita y valida la empresa del héroe.#
+    #Solicita y valida la empresa del héroe.
     print(f"  Empresas válidas: {', '.join(EMPRESAS_VALIDAS)}")
     empresa = input("  Empresa: ").strip()
     if empresa not in EMPRESAS_VALIDAS:
@@ -88,7 +88,7 @@ def validar_numero_positivo(mensaje: str) -> float:
 
 
 def validar_genero() -> str:
-    #Solicita y valida el género del héroe.#
+    #Solicita y valida el género del héroe.
     print(f"  Géneros válidos: {', '.join(GENEROS_VALIDOS)}")
     genero = input("  Género: ").strip().upper()
     if genero not in GENEROS_VALIDOS:
@@ -98,7 +98,7 @@ def validar_genero() -> str:
 
 
 def validar_inteligencia() -> str:
-    #Solicita y valida el nivel de inteligencia del héroe.#
+    #Solicita y valida el nivel de inteligencia del héroe.
     print(f"  Niveles válidos: {', '.join(INTELIGENCIAS_VALIDAS)}")
     intel = input("  Inteligencia: ").strip().lower()
     if intel not in INTELIGENCIAS_VALIDAS:
@@ -156,7 +156,7 @@ def ordenar_por_nombre_burbuja(lista: list) -> list:
 #  OPCIONES DEL MENÚ
 
 def listar_heroes(lista: list):
-    #Opción 1 — Lista todos los héroes.#
+    #Opción 1 — Lista todos los héroes.
     if len(lista) == 0:
         print("\n La lista de héroes está vacía.")
         return
@@ -166,7 +166,7 @@ def listar_heroes(lista: list):
 
 
 def agregar_heroe(lista: list):
-    #Opción 2 — Agrega un nuevo héroe con validaciones.#
+    #Opción 2 — Agrega un nuevo héroe con validaciones.
     print("\n  ── Ingresá los datos del nuevo héroe ──\n")
     nombre     = validar_string_no_vacio("  Nombre      : ")
     identidad  = validar_string_no_vacio("  Identidad   : ")
@@ -207,7 +207,7 @@ def eliminar_heroe(lista: list):
 
 
 def ordenar_heroes(lista: list):
-    #Opción 4 — Ordena la lista alfabéticamente por nombre.#
+    #Opción 4 — Ordena la lista alfabéticamente por nombre.
     if len(lista) == 0:
         print("\n La lista de héroes está vacía.")
         return
@@ -218,7 +218,7 @@ def ordenar_heroes(lista: list):
 
 
 def ver_heroe_mas_alto(lista: list):
-    #Opción 5 — Muestra el héroe con mayor altura.#
+    #Opción 5 — Muestra el héroe con mayor altura.
     if len(lista) == 0:
         print("\n La lista de héroes está vacía.")
         return
@@ -228,7 +228,7 @@ def ver_heroe_mas_alto(lista: list):
 
 
 def ver_heroe_mas_fuerte(lista: list):
-    #Opción 6 — Muestra el héroe con mayor fuerza.#
+    #Opción 6 — Muestra el héroe con mayor fuerza.
     if len(lista) == 0:
         print("\n  La lista de héroes está vacía.")
         return
@@ -238,7 +238,7 @@ def ver_heroe_mas_fuerte(lista: list):
 
 
 def ver_heroe_menos_pesado(lista: list):
-    #Opción 7 — Muestra el héroe con menor peso.#
+    #Opción 7 — Muestra el héroe con menor peso.
     if len(lista) == 0:
         print("\n La lista de héroes está vacía.")
         return
@@ -272,7 +272,7 @@ def menu_principal():
         elif opcion == "7":
             ver_heroe_menos_pesado(heroes)
         elif opcion == "0":
-            print("\n  👋 Hasta la próxima. ¡Que la fuerza te acompañe!\n")
+            print("\n Hasta la próxima.")
             continuar = False
         else:
             print("\nOpción inválida. Ingresá un número del 0 al 7.")
